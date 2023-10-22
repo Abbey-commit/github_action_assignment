@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  username: ${{ secrete.USERNAME }}
+  username: ${{ secrets.USERNAME }}
   password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
 
 jobs:
