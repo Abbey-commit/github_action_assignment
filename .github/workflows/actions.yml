@@ -12,10 +12,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-<<<<<<< HEAD
-=======
-
->>>>>>> ba34de5e12b9161af53b5abcea9bcd0737339577
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
