@@ -1,0 +1,12 @@
+name: MY DOCKER IMAGE GITHUB ACTION
+
+puch:
+  branches:
+      - master
+
+jobs:
+  build:
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build docker images
+      run: docker build -t demo .
