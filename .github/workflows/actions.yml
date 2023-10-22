@@ -18,4 +18,4 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.DOCKER_ACCESS_TOKEN }}
         run: |
           echo "$DOCKER_ACCESS_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
-
+          docker build -t my-image:latest .
