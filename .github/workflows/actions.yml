@@ -17,5 +17,5 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build Docker Image
-        run: docker login -u "$username and my password is $password"
+        run: docker login -u "$username" -p "$password"
 
