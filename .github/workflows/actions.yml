@@ -17,5 +17,5 @@ jobs:
           DOCKER_USERNAME: ${{ secrets.USERNAME }}
           DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKER_ACCESS_TOKEN }}
         run: |
-          echo: "$DOCKER_ACCESS_TOKEN" | docker login -u "$DOCKER_USERNAME" -p --password-stdin
+          echo "$DOCKER_ACCESS_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
