@@ -7,19 +7,15 @@ on:
 
 env:
   username: ${{ secrete.USERNAME }}
-  password: ${{ secrets.PASSWORD }}
+  password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
-<<<<<<< HEAD
-=======
-
->>>>>>> ba34de5e12b9161af53b5abcea9bcd0737339577
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Build Docker Image
-        run: echo "$username and my password is $password"
+        run: docker login -u "$username and my password is $password"
 
