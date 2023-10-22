@@ -5,16 +5,17 @@ on:
     branches:
       - master
 
+env:
+  username: ${{ secrete.USERNAME }}
+  password: ${{ secrets.PASSWORD }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
-<<<<<<< HEAD
-
-=======
->>>>>>> d917493aade4e4e8b864322f64c411fc85494b0b
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Build Docker Image
-        run: docker build -t demo .
+        run: echo "$username and my password is $password"
+
